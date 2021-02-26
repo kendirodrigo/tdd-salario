@@ -1,15 +1,13 @@
 package com.example.tddsalario;
 
-import java.math.BigDecimal;
-
 public class Funcionario {
 
     private final String nome;
     private final String sobrenome;
     private final Cargo cargo;
-    private final BigDecimal salarionBruto;
+    private final double salarionBruto;
 
-    public Funcionario(final String nome, final String sobrenome, final Cargo cargo, final BigDecimal salarioBruto) {
+    public Funcionario(final String nome, final String sobrenome, final Cargo cargo, final double salarioBruto) {
 
         this.nome = nome;
         this.sobrenome = sobrenome;

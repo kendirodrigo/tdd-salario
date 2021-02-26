@@ -1,25 +1,19 @@
 package com.example.tddsalario;
 
-import java.math.BigDecimal;
-
 public class CalculadoraSalario {
 
-    public BigDecimal calcularSalarioLiquido(Cargo desenvolvedor, double salario) throws Exception {
-        BigDecimal porcentagemDesconto;
+    public Double calcularSalarioLiquido(Cargo desenvolvedor, double salario) throws Exception {
+        double porcentagemDesconto;
         if (desenvolvedor == Cargo.DESENVOLVEDOR) {
             if (salario > 3000) {
-                porcentagemDesconto = new BigDecimal(0.20);
-                BigDecimal valorSalario = BigDecimal.valueOf(salario);
+                porcentagemDesconto = 0.80;
 
-                BigDecimal valorDesconto = valorSalario.multiply(porcentagemDesconto);
-                return valorDesconto.subtract(valorDesconto);
+                return salario * porcentagemDesconto;
             }
-            porcentagemDesconto = new BigDecimal(0.10);
-            BigDecimal valorSalario = BigDecimal.valueOf(salario);
+            porcentagemDesconto = 0.90;
 
-            BigDecimal valorDesconto = valorSalario.multiply(porcentagemDesconto);
+            return salario * porcentagemDesconto;
 
-            return valorDesconto.subtract(valorDesconto);
         } else if (desenvolvedor == Cargo.DBA || desenvolvedor == Cargo.QA) {
 
         } else if (desenvolvedor == Cargo.COORDENADOR || desenvolvedor == Cargo.GERENTE) {
