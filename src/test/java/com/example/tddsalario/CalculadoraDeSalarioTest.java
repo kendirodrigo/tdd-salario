@@ -32,7 +32,7 @@ class CalculadoraDeSalarioTest {
 
         Funcionario dba = new DBA(nome, sobrenome, Cargo.DBA, 2499.0);
 
-        Assertions.assertEquals(1350, dba.getSalarioLiquido());
+        Assertions.assertEquals(2124,15, dba.getSalarioLiquido());
     }
 
     @Test
@@ -42,6 +42,6 @@ class CalculadoraDeSalarioTest {
 
         Funcionario dba = new DBA(nome, sobrenome, Cargo.DBA, 3001.0);
 
-        Assertions.assertEquals(2400.8, dba.getSalarioLiquido());
+        Assertions.assertEquals(2250,75, dba.getSalarioLiquido());
     }
 }
