@@ -13,6 +13,23 @@ public class Funcionario {
         this.sobrenome = sobrenome;
         this.cargo = cargo;
         this.salarionBruto = salarioBruto;
-
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public Cargo getCargo() {
+        return cargo;
+    }
+
+    public double getSalarionBruto() {
+        return salarionBruto;
+    }
+
+
 }

@@ -11,7 +11,7 @@ public class CalculadoraDeSalarioTest {
         String sobrenome = "";
         Funcionario desenvolvedor = new Funcionario(nome, sobrenome, Cargo.DESENVOLVEDOR, 1500.0);
         CalculadoraSalario calculadoraSalario = new CalculadoraSalario();
-        Double salarioLiquido = calculadoraSalario.calcularSalarioLiquido(Cargo.DESENVOLVEDOR, 1500.0);
+        Double salarioLiquido = calculadoraSalario.calcularSalarioLiquido(desenvolvedor);
 
         Assertions.assertEquals(1350, salarioLiquido);
     }

@@ -2,21 +2,21 @@ package com.example.tddsalario;
 
 public class CalculadoraSalario {
 
-    public Double calcularSalarioLiquido(Cargo desenvolvedor, double salario) throws Exception {
+    public Double calcularSalarioLiquido(Funcionario funcionario) throws Exception {
         double porcentagemDesconto;
-        if (desenvolvedor == Cargo.DESENVOLVEDOR) {
-            if (salario > 3000) {
+        if (funcionario.getCargo() == Cargo.DESENVOLVEDOR) {
+            if (funcionario.getSalarionBruto() > 3000) {
                 porcentagemDesconto = 0.80;
 
-                return salario * porcentagemDesconto;
+                return funcionario.getSalarionBruto() * porcentagemDesconto;
             }
             porcentagemDesconto = 0.90;
 
-            return salario * porcentagemDesconto;
+            return funcionario.getSalarionBruto() * porcentagemDesconto;
 
-        } else if (desenvolvedor == Cargo.DBA || desenvolvedor == Cargo.QA) {
+        } else if (funcionario.getCargo() == Cargo.DBA || funcionario.getCargo() == Cargo.QA) {
 
-        } else if (desenvolvedor == Cargo.COORDENADOR || desenvolvedor == Cargo.GERENTE) {
+        } else if (funcionario.getCargo() == Cargo.COORDENADOR || funcionario.getCargo() == Cargo.GERENTE) {
 
         } else {
             throw new Exception("Cargo inv�lido.");
