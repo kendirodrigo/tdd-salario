@@ -1,5 +1,8 @@
 package com.example.tddsalario;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -91,8 +94,20 @@ class CalculadoraDeSalarioTest {
         String nome = "Gerente";
         String sobrenome = "TesteAbaixo";
 
-        Funcionario gerente = new Gerente(nome, sobrenome, Cargo.GERENTE, 4999.0);
+        Funcionario gerente = new Gerente(nome, sobrenome, Cargo.GERENTE, 4499.0);
 
-        Assertions.assertEquals(4999.0 * 0.75,gerente.getSalarioLiquido());
+        Assertions.assertEquals(4499.0 * 0.75,gerente.getSalarioLiquido());
+    }
+
+    @Test
+    void deveDispararExcecaoComCargoNulo() {
+        Exception exception = assertThrows(NullPointerException.class, () -> {
+            new Gerente("", "", null, 4499.0);
+        });
+
+        String mensagemEsperada = "Cargo nulo";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.contains(mensagemEsperada));
     }
 }

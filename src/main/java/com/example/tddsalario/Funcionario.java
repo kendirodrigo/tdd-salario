@@ -1,5 +1,7 @@
 package com.example.tddsalario;
 
+import java.util.Objects;
+
 public abstract class Funcionario {
 
     private final String nome;
@@ -9,6 +11,7 @@ public abstract class Funcionario {
 
     public Funcionario(final String nome, final String sobrenome, final Cargo cargo, final double salarioBruto) {
 
+        Objects.requireNonNull(cargo, "Cargo nulo");
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cargo = cargo;
