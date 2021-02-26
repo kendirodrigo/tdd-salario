@@ -15,14 +15,14 @@ As	regras	de	negócio	são	as seguintes:
 - Caso funcionário não tenha sobrenome, retornar uma exceção com a mensagem "Funcionário invalido";
 
 Cenarios:
-    Validar salario liquido para desenvolvedores com salario abaixo do limite
-    Validar salario liquido para desenvolvedores com salario acima do limite
-    Validar salario liquido para dbas com salario abaixo do limite
-    Validar salario liquido para dbas com salario acima do limite
-    Validar salario liquido para qas com salario abaixo do limite
-    Validar salario liquido para qas com salario acima do limite
-    Validar exceção com a mensagem "Cargo invalido" caso cargo não exista
-    Validar com a mensagem "Funcionário invalido" caso sobrenome seja nulo
+Validar salario liquido para desenvolvedores com salario abaixo do limite
+Validar salario liquido para desenvolvedores com salario acima do limite
+Validar salario liquido para dbas com salario abaixo do limite
+Validar salario liquido para dbas com salario acima do limite
+Validar salario liquido para qas com salario abaixo do limite
+Validar salario liquido para qas com salario acima do limite
+Validar que o campo cargo não pode ser nulo
+
 
 
 Fase 2
@@ -30,7 +30,8 @@ Fase 2
 Armazenar funcionario calculando o salario liquido em um H2.
 
 Cenários:
-    Validar inserção do funcionário no banco de dados, com o salario liquido.
+Validar inserção do funcionário no banco de dados, com o salario liquido calculado corretamente.
+Validar que o campo cargo não pode ser nulo
 
 
 Fase 3
@@ -39,8 +40,8 @@ Expor um endpoint de post para gravar um funcionario
 Expor um endpoint de get para retornar todos os funcionarios
 
 Cenários:
-    Validar status code de sucesso pra o endpoint de post, e se o funcionário inserido está correto
-    Validar status code de sucesso pra o endpoint de get, e se o size esperado é igual a qtd de funcionarios inseridos
-
+Validar status code de sucesso pra o endpoint de post, e se o funcionário inserido está correto
+Validar status code de sucesso pra o endpoint de get, e se o size esperado é igual a qtd de funcionarios inseridos
+validar status code de bad request para o endpoint de post, se o cargo for nulo
 
 
