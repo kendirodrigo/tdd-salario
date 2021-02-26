@@ -72,7 +72,7 @@ class CalculadoraDeSalarioTest {
 
         Funcionario coordenador = new Coordenador(nome, sobrenome, Cargo.COORDENADOR, 2499.0);
 
-        Assertions.assertEquals(2499.0 * 0.75,75, coordenador.getSalarioLiquido());
+        Assertions.assertEquals(2499.0 * 0.75, coordenador.getSalarioLiquido());
     }
 
     @Test
@@ -82,6 +82,17 @@ class CalculadoraDeSalarioTest {
 
         Funcionario coordenador = new Coordenador(nome, sobrenome, Cargo.COORDENADOR, 4501);
 
-        Assertions.assertEquals(4501 * 0.70,75, coordenador.getSalarioLiquido());
+        Assertions.assertEquals(4501 * 0.70, coordenador.getSalarioLiquido());
+
+    }
+
+    @Test
+    void deveCalcularSalarioParaGerentesComSalarioAbaixoDoLimite() throws Exception {
+        String nome = "Gerente";
+        String sobrenome = "TesteAbaixo";
+
+        Funcionario gerente = new Gerente(nome, sobrenome, Cargo.GERENTE, 4999.0);
+
+        Assertions.assertEquals(4999.0 * 0.75,gerente.getSalarioLiquido());
     }
 }
