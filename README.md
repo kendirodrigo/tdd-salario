@@ -11,8 +11,6 @@ As	regras	de	negócio	são	as seguintes:
 - Desenvolvedores possuem 20% de desconto caso seus salários sejam maiores do que R$3.000,00. Caso contrário, o desconto é de 10%.
 - DBAs e QAs possuem desconto de 25% se seus salários forem maiores do que R$2.500,00. Em caso contrário, 15%.
 - Coordenadores e Gerentes possuem desconto de 30% se seus salários forem maiores do que R$4.500,00. Em caso contrário, 25%.
-- Caso cargo não exista, retornar uma exceção com a mensagem "Cargo invalido";
-- Caso funcionário não tenha sobrenome, retornar uma exceção com a mensagem "Funcionário invalido";
 
 Cenarios:
 - Validar salario liquido para desenvolvedores com salario abaixo do limite (R$3.000,00)
