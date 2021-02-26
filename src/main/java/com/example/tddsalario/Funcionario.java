@@ -1,6 +1,6 @@
 package com.example.tddsalario;
 
-public class Funcionario {
+public abstract class Funcionario {
 
     private final String nome;
     private final String sobrenome;
@@ -31,5 +31,6 @@ public class Funcionario {
         return salarionBruto;
     }
 
+    public abstract double getSalarioLiquido();
 
 }
