@@ -30,7 +30,7 @@ class CalculadoraDeSalarioTest {
         String nome = "DBA";
         String sobrenome = "TesteAbaixo";
 
-        Funcionario dba = new DBA(nome, sobrenome, Cargo.DBA, 2499.0);
+        Funcionario dba = new Dba(nome, sobrenome, Cargo.DBA, 2499.0);
 
         Assertions.assertEquals(2124,15, dba.getSalarioLiquido());
     }
@@ -40,7 +40,7 @@ class CalculadoraDeSalarioTest {
         String nome = "DBA";
         String sobrenome = "TesteAcima";
 
-        Funcionario dba = new DBA(nome, sobrenome, Cargo.DBA, 3001.0);
+        Funcionario dba = new Dba(nome, sobrenome, Cargo.DBA, 3001.0);
 
         Assertions.assertEquals(2250,75, dba.getSalarioLiquido());
     }

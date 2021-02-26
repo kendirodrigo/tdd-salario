@@ -1,19 +1,19 @@
 package com.example.tddsalario;
 
-public class DBA {
+public class Dba extends Funcionario{
 
-    public DBA(String nome, String sobrenome, Cargo cargo, double salarioBruto) {
+    public Dba(String nome, String sobrenome, Cargo cargo, double salarioBruto) {
         super(nome, sobrenome, cargo, salarioBruto);
     }
 
     @Override
     public double getSalarioLiquido() {
-        double porcentagemSalarioComDesconto = 0.80;
-        if (this.getSalarionBruto() > 3000) {
+        double porcentagemSalarioComDesconto = 0.75;
+        if (this.getSalarionBruto() > 2500) {
 
             return this.getSalarionBruto() * porcentagemSalarioComDesconto;
         }
-        porcentagemSalarioComDesconto = 0.90;
+        porcentagemSalarioComDesconto = 0.85;
         return this.getSalarionBruto() * porcentagemSalarioComDesconto;
     }
 }
