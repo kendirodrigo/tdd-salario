@@ -15,13 +15,13 @@ As	regras	de	negócio	são	as seguintes:
 - Caso funcionário não tenha sobrenome, retornar uma exceção com a mensagem "Funcionário invalido";
 
 Cenarios:
-Validar salario liquido para desenvolvedores com salario abaixo do limite
-Validar salario liquido para desenvolvedores com salario acima do limite
-Validar salario liquido para dbas com salario abaixo do limite
-Validar salario liquido para dbas com salario acima do limite
-Validar salario liquido para qas com salario abaixo do limite
-Validar salario liquido para qas com salario acima do limite
-Validar que o campo cargo não pode ser nulo
+- Validar salario liquido para desenvolvedores com salario abaixo do limite
+- Validar salario liquido para desenvolvedores com salario acima do limite
+- Validar salario liquido para dbas com salario abaixo do limite
+- Validar salario liquido para dbas com salario acima do limite
+- Validar salario liquido para qas com salario abaixo do limite
+- Validar salario liquido para qas com salario acima do limite
+- Validar que o campo cargo não pode ser nulo
 
 
 
