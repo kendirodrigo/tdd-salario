@@ -13,5 +13,7 @@ public class CalculadoraDeSalarioTest {
         CalculadoraSalario calculadoraSalario = new CalculadoraSalario();
         BigDecimal salarioLiquido = calculadoraSalario.calcularSalarioLiquido(Cargo.DESENVOLVEDOR, 1500.0);
         Assert.assertEquals(1350, salarioLiquido);
+
+        // teste do cadini
     }
 }
