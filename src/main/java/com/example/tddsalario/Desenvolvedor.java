@@ -2,7 +2,7 @@ package com.example.tddsalario;
 
 public class Desenvolvedor extends Funcionario {
 
-    double taxa = 0.2;
+
 
     public Desenvolvedor(String nome, String sobrenome, Cargo cargo, double salarioBruto) {
         super(nome, sobrenome, cargo, salarioBruto);
@@ -10,15 +10,13 @@ public class Desenvolvedor extends Funcionario {
 
     @Override
     public double getSalarioLiquido() {
-        return 0;
-    }
+            double porcentagemSalarioComDesconto = 0.80;
+            if (this.getSalarionBruto() > 3000) {
 
-
-    public double getSalarioLiquido(double salarioBruto) {
-        if(salarioBruto >= 3000) {
-
-        }
-        return salarioBruto * taxa;
+                return this.getSalarionBruto() * porcentagemSalarioComDesconto;
+            }
+            porcentagemSalarioComDesconto = 0.90;
+            return this.getSalarionBruto() * porcentagemSalarioComDesconto;
     }
 
 }
