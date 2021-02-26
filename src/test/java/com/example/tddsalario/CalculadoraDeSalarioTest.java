@@ -44,4 +44,44 @@ class CalculadoraDeSalarioTest {
 
         Assertions.assertEquals(2250,75, dba.getSalarioLiquido());
     }
+
+    @Test
+    void deveCalcularSalarioParaQAComSalarioAbaixoDoLimite() throws Exception {
+        String nome = "QA";
+        String sobrenome = "TesteAbaixo";
+
+        Funcionario qa = new Qa(nome, sobrenome, Cargo.QA, 2499.0);
+
+        Assertions.assertEquals(2124,15, qa.getSalarioLiquido());
+    }
+
+    @Test
+    void deveCalcularSalarioParaQAComSalarioAcimaDoLimite() throws Exception {
+        String nome = "QA";
+        String sobrenome = "TesteAcima";
+
+        Funcionario qa = new Qa(nome, sobrenome, Cargo.QA, 3001.0);
+
+        Assertions.assertEquals(2250,75, qa.getSalarioLiquido());
+    }
+
+    @Test
+    void deveCalcularSalarioParaCoordenadoresComSalarioAbaixoDoLimite() throws Exception {
+        String nome = "Coordenador";
+        String sobrenome = "TesteAbaixo";
+
+        Funcionario coordenador = new Coordenador(nome, sobrenome, Cargo.COORDENADOR, 2499.0);
+
+        Assertions.assertEquals(2499.0 * 0.75,75, coordenador.getSalarioLiquido());
+    }
+
+    @Test
+    void deveCalcularSalarioParaCoordenadoresComSalarioAcimaDoLimite() throws Exception {
+        String nome = "Coordenador";
+        String sobrenome = "TesteAcima";
+
+        Funcionario coordenador = new Coordenador(nome, sobrenome, Cargo.COORDENADOR, 4501);
+
+        Assertions.assertEquals(4501 * 0.70,75, coordenador.getSalarioLiquido());
+    }
 }
